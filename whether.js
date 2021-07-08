@@ -39,7 +39,13 @@ app.post("/", (req, res) => {
           " degrees celsius </p>"
       );
 
-      res.write("<div><h1 style={{color: "red"}}>Humidy of " + cityName + " is " + humidy + "%  </p></div>");
+      res.write(
+        "<div><h1 style='color:red'>Humidy of " +
+          cityName +
+          " is " +
+          humidy +
+          "%  </h1></div>"
+      );
       res.write("<p>Wind speed of " + cityName + " is " + windSpeed + "  </p>");
 
       res.send();
