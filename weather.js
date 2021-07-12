@@ -3,6 +3,7 @@ const express = require("express");
 const https = require("https");
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
@@ -40,11 +41,7 @@ app.post("/", (req, res) => {
       );
 
       res.write(
-        "<div><h1 style='color:red'>Humidy of " +
-          cityName +
-          " is " +
-          humidy +
-          "%  </h1></div>"
+        "<div><p >Humidy of " + cityName + " is " + humidy + "%  </p></div>"
       );
       res.write("<p>Wind speed of " + cityName + " is " + windSpeed + "  </p>");
 
@@ -53,6 +50,6 @@ app.post("/", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("port 3000 started");
+app.listen(PORT, () => {
+  console.log("port " + PORT + " started");
 });

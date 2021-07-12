@@ -1,21 +1,16 @@
 {
-  "name": "whetherproject",
+  "name": "new",
   "version": "1.0.0",
   "description": "",
-  "main": "whether.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "server": "nodemon index.js",
-    "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run build --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client/ && npm install && npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "dinethrex",
+  "author": "din/threx",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bootstrap": "^5.0.2",
     "express": "^4.17.1"
   }
 }
